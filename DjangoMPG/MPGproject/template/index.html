@@ -1,0 +1,64 @@
+
+
+{% extends 'headerPage.html' %}
+
+{% block content%}
+<head>
+   <style>
+      .container1 {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .rounded-button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+   </style>
+</head>
+
+    <h2>Check mileage of you Car Instantly</h2>
+
+    <h3>Please enter details:</h3>
+    <br>
+    {%  if scoreval  %}
+    <form method="post" enctype="multipart/form-data" action="updateDataBase">
+    {% else %}
+    <form method="post" enctype="multipart/form-data" action="predictMPG">
+    {% endif%}
+ {% csrf_token %}
+    <div class="col-md-4 col-sm-4"><label for="fname">Cylinders:</label> </div> <input name="cylinderVal" type="text" value={{temp.cylinders}}><br><br>
+    <div class="col-md-4 col-sm-4"><label for="lname">Displacement:</label> </div> <input type="text" id="lname" name="dispVal" value={{temp.displacement}}><br><br>
+    <div class="col-md-4 col-sm-4"><label for="fname">Horsepower:</label> </div> <input type="text" id="fname" name="hrsPwrVal" value={{temp.horsepower}}><br><br>
+    <div class="col-md-4 col-sm-4"><label for="lname">Weight:</label> </div> <input type="text" id="lname" name="weightVal" value={{temp.weight}}><br><br>
+    <div class="col-md-4 col-sm-4"><label for="fname">Acceleration:</label></div>  <input type="text" id="fname" name="accVal" value={{temp.acceleration}}><br><br>
+    <div class="col-md-4 col-sm-4"><label for="lname">Model:</label> </div> <input type="text" id="lname" name="modelVal" value={{temp.model_year}}><br><br>
+    <div class="col-md-4 col-sm-4"><label for="lname">Origin:</label> </div> <input type="text" id="lname" name="originVal" value={{temp.origin}}><br><br>
+    <br>
+
+ {%  if scoreval  %}
+ <h1>The mpg score is {{scoreval}}</h1>
+ <h3>If the response is good. Do you want to save it in DB?
+ </h3>
+ <input type="hidden" id="lname" name="mpgVal" value={{scoreval}}>
+ <input type="submit" value="Submit" ></div>
+ {% else %}
+ <input type="submit" value="Submit" ></div>
+ {% endif %}
+
+</form>
+<br>
+
+
+{% endblock %}

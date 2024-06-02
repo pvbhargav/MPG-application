@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>MPG prediction usecase</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/animate.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" >
+     <style>
+          .header1 {
+               padding: 60px; /* Add padding to create space around the header */
+               text-align: center; /* Center the text horizontally */
+               background: #007bff; /* Use a blue background color (you can change this to any other shade of blue) */
+               color: white; /* Set the text color to white */
+               font-size: 30px; /* Adjust the font size as needed */
+          }
+          .navbar-default {
+               background-color: #007bff; /* Blue color */
+               border-color: #007bff; /* Optional: to change the border color as well */
+               width: 1200px;
+          }
+          .navbar-default .navbar-nav > li > a {
+               color: white; /* Set the text color to white 
+               padding: 10px 15px; /* Add padding to bring the links inside */
+          }
+          .navbar-default .navbar-nav > li > a:hover {
+               background-color: #00438b;
+               color: wheat;
+          }
+          .navbar-default .navbar-brand,
+          .navbar-default .navbar-toggle .icon-bar {
+               color: white; /* Set the text and icon color to white */
+          }
+         .lol{
+          right:50px;
+         }
+          
+     </style>
+
+     <!-- MAIN CSS -->
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" >
+
+     <div class="container" >
+     <!-- MENU -->
+     <header>
+     <!-- <section class="navbar navbar-default navbar-static-top" role="navigation" style="align-items: center;  background-color: blue; position: fixed;" > -->
+          <nav class="navbar navbar-default navbar-static-top">
+          <div class="container" class="header1" >
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="/" class="navbar-brand"><i class="fa fa-h-square"></i>MPG Problem</a>
+                    
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse lol" class="header">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" class="smoothScroll">Home</a></li>
+                    <li><a href="viewDataBase/" class="smoothScroll">View DataBase</a></li>
+                    </ul>
+               </div>
+
+          </div>
+          </nav>
+     <!-- </section> -->
+</header>
+</div>
+
+
+     <!-- HOME -->
+
+
+<div class="container">
+     {% block content%}
+     {% endblock %}
+    
+</div>
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container" >
+               <div class="row" >
+
+                    
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright </p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   
+                                   <a href="#">Save</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script  src="{% static 'js/jquery.js' %}"></script>
+     <script  src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script  src="{% static 'js/jquery.sticky.js' %}"></script>
+     <script  src="{% static 'js/jquery.stellar.min.js' %}"></script>
+     <script  src="{% static 'js/wow.min.js' %}"></script>
+     <script  src="{% static 'js/smoothscroll.js' %}"></script>
+     <script  src="{% static 'js/owl.carousel.min.js' %}"></script>
+     <script  src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
